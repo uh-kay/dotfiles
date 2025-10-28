@@ -34,3 +34,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 eval "$(direnv hook bash)"
+alias task=go-task

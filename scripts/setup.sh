@@ -19,14 +19,16 @@ packages() {
     app.zen_browser.zen \
     com.mattjakeman.ExtensionManager \
     org.torproject.torbrowser-launcher \
-    com.usebruno.Bruno \
-    com.usebottles.bottles
+    com.usebottles.bottles \
+    dev.vencord.Vesktop \
+    com.github.tchx84.Flatseal
 
-    sudo dnf install go direnv just php composer nodejs pnpm zig
+    sudo dnf install go direnv just nodejs pnpm golangci-lint
 }
 
 dconf() {
     gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+    gsettings set org.gnome.desktop.interface accent-color green
 }
 
 dotfiles
