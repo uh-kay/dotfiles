@@ -22,7 +22,9 @@ packages() {
     dev.vencord.Vesktop \
     com.github.tchx84.Flatseal
 
-    sudo dnf install go direnv just nodejs pnpm golangci-lint stow gh goose docker-compose docker-cli
+    sudo dnf install go direnv just nodejs pnpm golangci-lint stow gh docker-compose docker-cli
+
+    go install github.com/pressly/goose/v3/cmd/goose@latest
 }
 
 dconf() {
