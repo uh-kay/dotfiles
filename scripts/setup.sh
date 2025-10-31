@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 dotfiles() {
-	mv -nv ~/.bashrc ~/.config/.backup.bashrc
-
-	ln -sv ~/Projects/dotfiles/configs/.gitconfig     -t ~/
-	ln -sv ~/Projects/dotfiles/configs/.bashrc        -t ~/
+	ln -sv ~/dotfiles/.gitconfig -t ~/
+	ln -sv ~/dotfiles/.bashrc -t ~/
+	ln -sv ~/dotfiles/zed/settings.json -t ~/.var/app/dev.zed.Zed/config/zed/
 }
 
 packages() {
@@ -23,7 +22,7 @@ packages() {
     dev.vencord.Vesktop \
     com.github.tchx84.Flatseal
 
-    sudo dnf install go direnv just nodejs pnpm golangci-lint
+    sudo dnf install go direnv just nodejs pnpm golangci-lint stow gh goose
 }
 
 dconf() {
@@ -31,8 +30,8 @@ dconf() {
     gsettings set org.gnome.desktop.interface accent-color green
 }
 
-dotfiles
 packages
 dconf
+dotfiles
 
 exec bash
