@@ -35,3 +35,16 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 eval "$(direnv hook bash)"
 alias task=go-task
+
+#erlang
+export PATH=$HOME/erlang/bin:$PATH
+
+#gleam
+export PATH=$PATH:$HOME/gleam
+
+# pnpm
+export PNPM_HOME="/home/uhkay/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
