@@ -1,0 +1,50 @@
+{
+  "Insert Lustre paragraph": {
+    "prefix": "p",
+    "body": "html.p([${2}], [todo${1}])"
+  },
+  "Insert Lustre div": {
+    "prefix": "div",
+    "body": "html.div([${2}], [${1}])"
+  },
+  "Insert Lustre image": {
+    "prefix": "img",
+    "body": "html.img([attribute.src(\"${1}\"), attribute.alt(\"${2}\")])"
+  },
+  "Insert Lustre class attribute": {
+    "prefix": "class",
+    "body": "attribute.class(\"${1}\")"
+  },
+  "Insert Lustre h1": {
+    "prefix": "h1",
+    "body": "html.h1([${2}], [html.text(\"${1}\")])"
+  },
+  "Insert Luste none element": {
+    "prefix": "enone",
+    "body": "element.none()"
+  },
+  "Insert Lustre h2": {
+    "prefix": "h2",
+    "body": "html.h2([${2}], [html.text(\"${1}\")])"
+  },
+  "Insert field decoder": {
+    "prefix": "field",
+    "body": "decode.field(\"${1}\", ${2})"
+  },
+  "Insert Lustre button": {
+    "prefix": ["button", "btn"],
+    "body": "html.button([${2}], [html.text(todo${1})])"
+  },
+  "Insert Lustre a": {
+    "prefix": "a",
+    "body": "html.a([attribute.href(\"${2}\")], [html.text(todo${1})])"
+  },
+  "Insert Lustre form": {
+    "prefix": "form",
+    "body": "html.form([event.on_submit(todo)], [])"
+  },
+  "Insert Lustre text": {
+    "prefix": "text",
+    "body": "html.text(todo${1})"
+  }
+}
